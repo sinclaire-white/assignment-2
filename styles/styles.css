@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+.quicksand-font {
+    font-family: "Quicksand", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.raleway-font {
+    font-family: "Raleway", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+
+*{
+    margin: 0 auto;
+}
+
+/* shared styles */
+
+
+.max-width{
+    max-width: 1160px;
+}
+.flex{
+    display: flex;
+}
+
+section{
+    padding: 3.75rem 0;
+}
+.section-title{
+    color: rgb(0, 0, 0);
+    font-size: 2.875rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+
+/* nav styles */
+nav a{
+    text-decoration: none;
+}
+.icon{
+    display: none;
+}
+.navigation{
+    align-items: center;
+    margin: 20px 0px;
+    gap: 11rem;
+    max-width: 1160px;
+}
+.nav-list{
+    gap: 2rem;
+    list-style: none;
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+.logo-name{
+    align-items: center;
+}
+.name{
+    
+    font-size: 2rem;
+    font-weight: 700;
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+.nav-btn{
+    border-radius: 12px;
+    background: rgb(254, 163, 1);
+    padding: 0.625rem 3.75rem;
+    text-align: center;
+    color: white;
+    border: none;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+
+/* banner styles */
+.banner{
+    justify-content: center;
+    align-items: center;
+    gap: 3.125rem;
+}
+.banner-title{
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+.banner-description{
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+}
+.banner-btn{
+    border-radius: 12px;
+    background: rgb(17, 17, 17);
+    padding: 0.625rem 3.75rem;
+    text-align: center;
+    color: white;
+    border: none;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+/* curriculum styles */
+
+.curriculum{
+    text-align: center;
+}
+.curriculum-card-container{
+    gap: 1.75rem;
+}
+.
+.curriculum-title{
+    color: rgb(32, 32, 32);
+    font-size: 1.5rem;
+    font-weight: 700;
+    
+}
+.curriculum-img{
+    margin-bottom: 2rem;
+}
+.curriculum-description{
+    color: rgb(128, 128, 128);
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 2rem auto;
+}
+
+.curriculum-card{
+    padding: 3.5rem 2.5rem;
+    border-radius: 1rem;
+}
+.curriculum-card-1{
+    background: linear-gradient(to bottom, rgb(222, 245, 255),rgba(255, 255, 255, 0) 40%),rgb(255, 255, 255);
+}
+.curriculum-card-2{
+    background: linear-gradient(to bottom, rgb(255, 244, 220),rgba(255, 255, 255, 0) 40%),rgb(255, 255, 255);
+}
+.curriculum-card-3{
+    background: linear-gradient(to bottom, rgb(238, 225, 255),rgba(255, 255, 255, 0) 40%),rgb(255, 255, 255);
+}
+
+.read-more-1{
+    color: rgb(100, 200, 255);
+    font-size: 1rem;
+    font-weight: 700;
+}
+.read-more-2{
+    color: rgb(240, 170, 0);
+    font-size: 1rem;
+    font-weight: 700;
+}
+.read-more-3{
+    color: rgb(135, 0, 255);
+    font-size: 1rem;
+    font-weight: 700;
+}
+.arrow-btn{
+    height: 3.75rem;
+    width: 3.75rem;
+    border-radius: 50%;
+    color: white;
+    font-weight: 900;
+    font-size: 1.5rem;
+    border: none;
+    background-color: orange;
+    margin-right: .62rem;
+}
+
+/* responsive  styles*/
+
+@media screen and (max-width: 576px) {
+    /* header responsive */
+    *{
+       padding: 0 .15rem;
+       margin: 0 auto;
+    }
+    .nav-list, .name, .nav-btn {
+        display: none;
+    } 
+    .icon{
+        display: block;
+    }
+    .navigation{
+        gap: 16rem;
+    }
+    .banner {
+        flex-direction: column-reverse;
+    }
+    .banner-img{
+        width: 100%;
+    }
+
+
+
+}
