@@ -4,20 +4,18 @@
 
 .quicksand-font {
     font-family: "Quicksand", serif;
-    font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
 }
 
 .raleway-font {
     font-family: "Raleway", serif;
-    font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
   }
   
 
-*{
+.margin-zero-auto{
     margin: 0 auto;
 }
 
@@ -173,6 +171,9 @@ nav a{
     background-color: white;
     border: none;
 }
+.arrow-btn-container{
+    margin-top: 5rem;
+}
 .arrow-btn{
     height: 3.75rem;
     width: 3.75rem;
@@ -201,42 +202,95 @@ nav a{
 
 /* footer styles */
 
-/* footer{
-    display: none;
+footer{
     background-color: rgb(1, 172, 253);;
     color: white;
     padding: 7.6rem 14.25rem 10.875rem 8.75rem;
     gap: 9.5rem;
+    justify-content: center;
+    max-width: 1440px;
+    margin: auto;
 }
-.footer-details, .about, .social{
-    flex: 1;
+.footer-title{
+    font-weight: 700;
+    font-size: 2rem;
+    margin: 0;
+    
 }
-footer ul {
+.footer-description{
+    max-width: 400px;
+    
+}
+.footer-title-container{
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.5rem;
+    
+}
+.footer-logo{
+    background-color: white;
+    padding: 0.3rem 0.2rem;
+    border-radius: 8px;
+}
+.footer-paragraph{
+    font-size: 1.25rem;
+    line-height: 25px;
+}
+.about-list, .social-list{
     list-style: none;
+}
+.about-link{
     text-decoration: none;
     color: white;
+    font-weight: 500;
+    font-size: 1.25rem;
+    display: block;
+    margin-bottom: 1.3rem;
 }
-.about {
-    text-align: left;
-      
-} */
+.about-title{
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 30px;
+    margin: 0 0 2rem 0;
+}
+.social-title{
+    font-weight: 700;
+    font-size: 1.25rem;
+    margin: 0;
+}
+footer ul {
+    margin: 0;
+}
+footer ul li {
+    margin-bottom: 1.25rem;
+    margin-left: 0;
+}
+.social-icon{
+    margin-top: 1.25rem;
+    display: flex;
+    gap: 0.5rem;
+}
+
 
 /* responsive  styles*/
 
 @media screen and (max-width: 576px) {
-    /* header responsive */
-    *{
-       padding: 0 .15rem;
-       margin: 0 auto;
+    
+    header, main{
+        padding: 0 1rem;
     }
-    .nav-list, .name, .nav-btn, .arrow-btn{
+    header{
+        text-align: center;
+    }
+    
+    .nav-list, .name, .nav-btn, .arrow-btn-container{
         display: none;
     } 
     .icon{
         display: block;
     }
     .navigation{
-        gap: 16rem;
+        justify-content: space-between;
     }
     .banner, .curriculum-card-container{
         flex-direction: column-reverse;
@@ -244,7 +298,10 @@ footer ul {
     .banner-img{
         width: 100%;
     }
-
-
-
+    footer{
+        flex-direction: column;
+        padding: 4.5rem 0.75rem 4.5rem 1.25rem;
+        gap: 2rem;
+       justify-content: flex-start;
+    }
 }
