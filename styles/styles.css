@@ -23,7 +23,9 @@
 
 /* shared styles */
 
-
+.hide{
+    display: none;
+}
 .max-width{
     max-width: 1160px;
 }
@@ -118,7 +120,6 @@ nav a{
 .curriculum-card-container{
     gap: 1.75rem;
 }
-.
 .curriculum-title{
     color: rgb(32, 32, 32);
     font-size: 1.5rem;
@@ -138,6 +139,8 @@ nav a{
 .curriculum-card{
     padding: 3.5rem 2.5rem;
     border-radius: 1rem;
+    flex: 1;
+    box-shadow: inset 0px 0px 28.3px 0.94px rgba(0, 0, 0, 0.05);
 }
 .curriculum-card-1{
     background: linear-gradient(to bottom, rgb(222, 245, 255),rgba(255, 255, 255, 0) 40%),rgb(255, 255, 255);
@@ -153,16 +156,22 @@ nav a{
     color: rgb(100, 200, 255);
     font-size: 1rem;
     font-weight: 700;
+    background-color: white;
+    border: none;
 }
 .read-more-2{
     color: rgb(240, 170, 0);
     font-size: 1rem;
     font-weight: 700;
+    background-color: white;
+    border: none;
 }
 .read-more-3{
     color: rgb(135, 0, 255);
     font-size: 1rem;
     font-weight: 700;
+    background-color: white;
+    border: none;
 }
 .arrow-btn{
     height: 3.75rem;
@@ -176,6 +185,42 @@ nav a{
     margin-right: .62rem;
 }
 
+/* stories styles */
+.our-stories{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+}
+.stories-card{
+    border-radius: 1rem;
+
+}
+.stories-img{
+
+}
+
+/* footer styles */
+
+/* footer{
+    display: none;
+    background-color: rgb(1, 172, 253);;
+    color: white;
+    padding: 7.6rem 14.25rem 10.875rem 8.75rem;
+    gap: 9.5rem;
+}
+.footer-details, .about, .social{
+    flex: 1;
+}
+footer ul {
+    list-style: none;
+    text-decoration: none;
+    color: white;
+}
+.about {
+    text-align: left;
+      
+} */
+
 /* responsive  styles*/
 
 @media screen and (max-width: 576px) {
@@ -184,7 +229,7 @@ nav a{
        padding: 0 .15rem;
        margin: 0 auto;
     }
-    .nav-list, .name, .nav-btn {
+    .nav-list, .name, .nav-btn, .arrow-btn{
         display: none;
     } 
     .icon{
@@ -193,7 +238,7 @@ nav a{
     .navigation{
         gap: 16rem;
     }
-    .banner {
+    .banner, .curriculum-card-container{
         flex-direction: column-reverse;
     }
     .banner-img{
