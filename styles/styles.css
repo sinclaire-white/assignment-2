@@ -367,7 +367,7 @@ footer ul li {
 
 @media screen and (max-width: 576px) {
     
-    header, .curriculum, .stories{
+    .banner, .curriculum, .stories{
         padding: 0 1rem;
     }
     header{
@@ -382,6 +382,9 @@ footer ul li {
     }
     .navigation{
         justify-content: space-between;
+        border: 1px solid orange;
+        padding: .5rem;
+
     }
     .banner, .curriculum-card-container{
         flex-direction: column-reverse;
