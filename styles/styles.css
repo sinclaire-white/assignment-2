@@ -18,7 +18,9 @@
 .margin-zero-auto{
     margin: 0 auto;
 }
-
+body{
+    max-width: 1440px;
+}
 /* shared styles */
 
 .hide{
@@ -41,7 +43,9 @@ section{
     text-align: center;
     margin-bottom: 5rem;
 }
-
+main{
+    background-image: url(/images/bg.png);
+}
 
 /* nav styles */
 nav a{
@@ -142,14 +146,19 @@ nav a{
 }
 .curriculum-card-1{
     background: linear-gradient(to bottom, rgb(222, 245, 255),rgba(255, 255, 255, 0) 40%),rgb(255, 255, 255);
+    border: 0.94px solid rgb(222, 245, 255);
 }
 .curriculum-card-2{
     background: linear-gradient(to bottom, rgb(255, 244, 220),rgba(255, 255, 255, 0) 40%),rgb(255, 255, 255);
+    border: 0.94px solid rgb(255, 244, 220);
 }
 .curriculum-card-3{
     background: linear-gradient(to bottom, rgb(238, 225, 255),rgba(255, 255, 255, 0) 40%),rgb(255, 255, 255);
+    border: 0.94px solid rgb(242, 232, 255);
 }
-
+.curriculum a{
+    text-decoration: none;
+}
 .read-more-1{
     color: rgb(100, 200, 255);
     font-size: 1rem;
@@ -185,19 +194,91 @@ nav a{
     background-color: orange;
     margin-right: .62rem;
 }
+.arrow-btn:hover{
+    background-color: white;
+    color: orange;
+}
 
 /* stories styles */
+.stories{
+    background: linear-gradient(to top, rgba(254, 163, 1, 0.3),rgba(255, 255, 255, 0.3) 100%);
+}
+.stories img{
+    border-radius: 1rem 1rem 0 0;
+}
+.stories-container{
+    gap: 1.125rem;
+}
 .our-stories{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1.25rem;
 }
-.stories-card{
-    border-radius: 1rem;
-
+.stories-container{
+    border-radius: 16px;
+    margin-bottom: 5rem;
 }
-.stories-img{
-
+.stories-card-large, .stories-card{
+    border-radius: 16px;
+    background-color: white;
+    position: relative;
+}
+.stories-card-large-details{
+    padding: 2.9rem 4.313rem 2.188rem 2.406rem;
+}
+.stories-title-large{
+    font-size: 1.5rem;
+    font-weight: 700;
+    position: relative;
+}
+.stories-title{
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 1.75rem 2.375rem;
+}
+.stories-btn-large{
+    position: absolute;
+    left: 2.4rem;
+    top: 19.5rem;
+    right: 20rem;
+    bottom: 18rem;
+    border-radius: 3rem;
+    background: rgb(60, 216, 232);
+    border: none;
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;   
+}
+.stories-btn{
+    position: absolute;
+    left: 2.397rem;
+    top: 9.9rem;
+    right: 4.875rem;
+    bottom: 7.2rem;  
+    border: none;
+    color: white;
+    background: rgb(149, 178, 38);
+    border-radius: 3rem;
+    font-weight: 500;
+    font-size: 1rem;  
+    /* padding: 0.625rem 1.25rem;      */
+}
+.stories-btn-black-container{
+    text-align: center;
+   padding-bottom: 3.5rem;
+}
+.stories-btn-black{
+    border-radius: 12px;
+    background: rgb(17, 17, 17);
+    padding: 0.625rem 3.75rem;
+    text-align: center;
+    color: white;
+    border: none;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+.blue{
+    background-color: rgba(93, 88, 240, 1);
 }
 
 /* footer styles */
@@ -208,8 +289,6 @@ footer{
     padding: 7.6rem 14.25rem 10.875rem 8.75rem;
     gap: 9.5rem;
     justify-content: center;
-    max-width: 1440px;
-    margin: auto;
 }
 .footer-title{
     font-weight: 700;
@@ -227,11 +306,11 @@ footer{
     gap: 0.5rem;
     
 }
-.footer-logo{
+/* .footer-logo{
     background-color: white;
     padding: 0.3rem 0.2rem;
     border-radius: 8px;
-}
+} */
 .footer-paragraph{
     font-size: 1.25rem;
     line-height: 25px;
@@ -276,14 +355,14 @@ footer ul li {
 
 @media screen and (max-width: 576px) {
     
-    header, main{
+    header, .curriculum, .stories{
         padding: 0 1rem;
     }
     header{
         text-align: center;
     }
     
-    .nav-list, .name, .nav-btn, .arrow-btn-container{
+    .nav-list, .name, .nav-btn, .arrow-btn-container, .stories-card-large{
         display: none;
     } 
     .icon{
@@ -295,7 +374,7 @@ footer ul li {
     .banner, .curriculum-card-container{
         flex-direction: column-reverse;
     }
-    .banner-img{
+    .banner-img, .stories-img{
         width: 100%;
     }
     footer{
@@ -304,4 +383,23 @@ footer ul li {
         gap: 2rem;
        justify-content: flex-start;
     }
+    .our-stories{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .stories-container{
+    margin-bottom: 2rem;
+    }
+    .stories-btn{
+        left: 1.375rem;
+        top: 6.2rem;
+        right: 3rem;
+        bottom: 9.938rem; 
+        font-size: 0.625rem;   
+        /* left: 1.375rem;
+        top: 5.8rem;
+        right: 3rem;
+        bottom: 11rem; 
+        font-size: 0.625rem;
+    } */
+
 }
